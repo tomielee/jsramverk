@@ -1,12 +1,58 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {
+    Route,
+    Link,
+    BrowserRouter as Router,
+    Switch
+} from 'react-router-dom'
+
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import About from './components/About';
+import Reports from './components/Reports';
+import Signup from './components/Signup';
+import Register from './components/Register';
+import Datepicker from './components/Datepicker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Notfound from './notfound';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import './index.css';
+
+const routing = (
+  <Router>
+    <div>
+        <ul className="menu">
+            <li>
+                <Link to="/">About</Link>
+            </li>
+            <li>
+                <Link to="/reports">Reports</Link>
+            </li>
+            <li>
+                <Link to="/signup">Sign up</Link>
+            </li>
+            <li>
+                <Link to="/App">Test</Link>
+            </li>
+            <li>
+                <Link to="/date">D</Link>
+            </li>
+        </ul>
+        <Switch>
+            <Route exact path="/" component={About} />
+            <Route path="/reports" component={Reports} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/register" component={Register}/>
+            <Route path="/date" component={Datepicker} />
+
+
+
+            <Route path="/App" component={App} />
+            <Route component={Notfound} />
+      </Switch>
+    </div>
+  </Router>
+)
+
+
+ReactDOM.render(routing, document.getElementById('root'))
