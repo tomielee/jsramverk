@@ -22,7 +22,11 @@
 // }
 
 // eslint-disable-next-line no-multi-str
-let w2 = "**Kmom02** \
+let w2 = "**Github** \
+        \ \n \
+        Latest push on github > [tag 2.0.1](https://github.com/jeneljenel/jsramverk) \
+        \ \n \
+        **Kmom02** \
         \ \n \
         Ambitionen var att göra en 'riktig' datepicker.Det finns kod för att rendera ut ett helt år. \
         Planen var att göra en 2D array med 35 element = 5 veckor x 7 dagar, detta för att sedan kunna mappa genom arrayen i en klickbar tabell. \
