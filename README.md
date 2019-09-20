@@ -27,4 +27,4 @@ You will also see any lint errors in the console.
 
 `npm install babel-cli babel-core --save-dev`
 
-`npm install react-markdown`
+`npm install --save react-markdown`
